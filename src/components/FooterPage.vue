@@ -55,7 +55,7 @@
       <div class="container">
         <button>SIGN-UP NOW!</button>
         <div class="social">
-          <div>FOLLOW US</div>
+          <div class="follow-us">FOLLOW US</div>
           <div class="icons">
             <img src="@/img/footer-facebook.png" alt="facebook">
             <img src="@/img/footer-twitter.png" alt="facebook">
@@ -145,6 +145,12 @@ $brand_color: rgb(12, 124, 236);
         align-items: center;
         color: $brand_color;
         font-weight: 700;
+        cursor: pointer;
+
+        .follow-us:hover{
+          color: white;
+          text-decoration: underline;
+        }
 
         img{
           width: 30px;

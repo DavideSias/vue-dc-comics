@@ -29,7 +29,6 @@ $brand_color: rgb(12, 124, 236);
 
 header{
   height: 100px;
-  padding: 1rem 0;
 }
 
 .navbar{

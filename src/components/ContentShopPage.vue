@@ -52,6 +52,11 @@ $brand_color: rgb(12, 124, 236);
       font-size: 14px;
       color: white;
       text-transform: uppercase;
+      cursor: pointer;
+
+      &:hover{
+        text-decoration: underline;
+      }
 
       img{
         width: 45px;
