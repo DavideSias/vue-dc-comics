@@ -1,6 +1,8 @@
 <template>
   <main>
-  -- Content Here --
+    <div class="container">
+      -- Content Here --
+    </div>
   </main>
 </template>
 
@@ -12,6 +14,16 @@ export default {
 
 <style lang="scss" scoped>
   main{
-    color: blue;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+
+    .container{
+      height: 100px;
+      max-width: 1200px;
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+    }
   }
 </style>
