@@ -1,6 +1,6 @@
 <template>
   <main>
-    prova content page
+  -- Content Here --
   </main>
 </template>
 
