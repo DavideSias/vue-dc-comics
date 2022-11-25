@@ -1,12 +1,22 @@
 <template>
   <main>
     <div class="container">
-      <CardComics
-        v-for="objComic in arrComics"
-        :key="objComic.series"
-        class="card-comic"
-        :comics="objComic"
-      />
+      <div class="flex-container">
+        <CardComics
+          v-for="objComic in arrComics"
+          :key="objComic.series"
+          class="card-comic"
+          :comics="objComic"
+        />
+      </div>
+      <div class="current-series">
+        current series
+      </div>
+      <div class="buttons">
+        <button class="load">
+          load more
+        </button>
+      </div>
     </div>
   </main>
 </template>
@@ -113,6 +123,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$brand_color: rgb(12, 124, 236);
 main {
   background-color: rgb(28, 28, 28);
   color: white;
@@ -120,15 +131,51 @@ main {
 
   .container {
     max-width: 1200px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     margin: 0 auto;
     padding: 1.5rem 0;
+    position: relative;
+
+    .flex-container{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .current-series{
+      background-color: $brand_color;
+      position: absolute;
+      left: 0;
+      top: -1rem;
+      padding: 0.5rem 1rem;
+      font-size: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .buttons{
+      margin-top: 2rem;
+      text-align: center;
+      .load{
+        background-color: $brand_color;
+        color: white;
+        padding: 0.5rem 3rem;
+        font-size: 12px;
+        font-weight: 700;
+        border: none;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        &:hover{
+          background-color: white;
+          color: $brand_color;
+        }
+      }
+    }
+
   }
 
   .card-comic{
     flex: 0 0 15%;
   }
+
 }
 </style>

@@ -14,6 +14,7 @@
         </li>
       </ul>
     </div>
+    <div class="jumbo"></div>
   </header>
 </template>
 
@@ -72,17 +73,13 @@ export default {
 <style lang="scss" scoped>
 $brand_color: rgb(12, 124, 236);
 
-header{
-  height: 100px;
-}
-
 .navbar{
   display: flex;
   max-width: 1200px;
   margin: auto;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
+  height: 100px;
 
   img{
     width: 70px;
@@ -117,6 +114,12 @@ header{
       }
     }
   }
+}
+
+.jumbo{
+  height: 400px;
+  background-image: url('./../img/jumbotron.jpg');
+  background-size: cover;
 }
 
 </style>
