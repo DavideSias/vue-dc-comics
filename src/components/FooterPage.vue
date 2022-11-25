@@ -6,62 +6,82 @@
           <div class="comics-shop-list">
             <div class="comics-list">
               <ul>
-                DC COMICS
-                <li class="first-item-list">Characters</li>
-                <li>Comics</li>
-                <li>Movies</li>
-                <li>TV</li>
-                <li>Games</li>
-                <li>Videos</li>
-                <li>News</li>
+                <h3> DC COMICS </h3>
+                <li
+                  v-for="element in arrNavbar"
+                  :key="element.text"
+                >
+                  <a :href="element.url">{{ element.text }}</a>
+                </li>
               </ul>
             </div>
             <div class="shop-list">
-              <ul> SHOP
-                <li class="first-item-list">Shop DC</li>
-                <li>Shop DC Collectibles</li>
+              <ul>
+                <h3>SHOP</h3>
+                <li
+                  v-for="element in arrLinkShop"
+                  :key="element.text"
+                >
+                  <a :href="element.url">{{ element.text }}</a>
+                </li>
               </ul>
             </div>
           </div>
           <div class="dc-list">
-            <ul> DC
-              <li class="first-item-list">Terms Of Use</li>
-              <li>Privacy Policy (New)</li>
-              <li>Ad Choices</li>
-              <li>Advertising</li>
-              <li>Jobs</li>
-              <li>subscriptions</li>
-              <li>Talent Workshops</li>
-              <li>CPSC Certificates</li>
-              <li>Ratings</li>
-              <li>Shop Help</li>
-              <li>Contact Us</li>
+            <ul>
+              <h3> DC </h3>
+              <li
+                v-for="element in arrLinkDc"
+                :key="element.text"
+              >
+                <a :href="element.url">{{ element.text }}</a>
+              </li>
             </ul>
           </div>
           <div class="sites-list">
-            <ul> SITES
-              <li class="first-item-list">DC</li>
-              <li>MAD Megazine</li>
-              <li>DC Kids</li>
-              <li>DC Universe</li>
-              <li>DC Power Visa</li>
+            <ul>
+              <h3> SITES </h3>
+              <li
+                v-for="element in arrSites"
+                :key="element.text"
+              >
+                <a :href="element.url">{{ element.text }}</a>
+              </li>
             </ul>
           </div>
         </div>
-        <div class="img-container"></div>
+        <div
+        class="img-container"></div>
       </div>
     </div>
     <div class="footer-social">
       <div class="container">
         <button>SIGN-UP NOW!</button>
         <div class="social">
-          <div class="follow-us">FOLLOW US</div>
+          <div class="follow-us">
+            FOLLOW US
+          </div>
           <div class="icons">
-            <img src="@/img/footer-facebook.png" alt="facebook">
-            <img src="@/img/footer-twitter.png" alt="facebook">
-            <img src="@/img/footer-youtube.png" alt="facebook">
-            <img src="@/img/footer-pinterest.png" alt="facebook">
-            <img src="@/img/footer-periscope.png" alt="facebook">
+            <img
+              src="@/img/footer-facebook.png"
+              alt="facebook"
+            >
+            <img
+              src="@/img/footer-twitter.png"
+              alt="facebook"
+            >
+            <img
+              src="@/img/footer-youtube.png"
+              alt="facebook"
+            >
+            <img
+              src="@/img/footer-pinterest.png"
+              alt="facebook"
+            >
+            <img
+              src="@/img/footer-periscope.png"
+              alt="facebook"
+            >
           </div>
         </div>
       </div>
@@ -72,6 +92,133 @@
 <script>
 export default {
   name: 'FooterPage',
+  data() {
+    return {
+      arrNavbar: [
+        {
+          url: '#characters',
+          text: 'characters',
+        },
+        {
+          url: '#comics',
+          text: 'comics',
+        },
+        {
+          url: '#movies',
+          text: 'movies',
+        },
+        {
+          url: '#tv',
+          text: 'tv',
+        },
+        {
+          url: '#games',
+          text: 'games',
+        },
+        {
+          url: '#collectibles',
+          text: 'collectibles',
+        },
+        {
+          url: '#videos',
+          text: 'videos',
+        },
+        {
+          url: '#fans',
+          text: 'fans',
+        },
+        {
+          url: '#news',
+          text: 'news',
+        },
+        {
+          url: '#shop',
+          text: 'shop',
+        },
+      ],
+
+      arrLinkShop: [
+        {
+          url: '#shopdc',
+          text: 'shop DC',
+        },
+        {
+          url: '#shopdc-collectibles',
+          text: 'shop DC collectibles',
+        },
+      ],
+
+      arrLinkDc: [
+        {
+          url: '#terms-of-use',
+          text: 'terms of use',
+        },
+        {
+          url: '#privacy',
+          text: 'privacy policy (new)',
+        },
+        {
+          url: '#ad',
+          text: 'ad choices',
+        },
+        {
+          url: '#adv',
+          text: 'advertising',
+        },
+        {
+          url: '#jobs',
+          text: 'jobs',
+        },
+        {
+          url: '#subscriptions',
+          text: 'subscriptions',
+        },
+        {
+          url: '#talent-workshop',
+          text: 'talent workshop',
+        },
+        {
+          url: '#CPSC',
+          text: 'CPSC certificate',
+        },
+        {
+          url: '#ratings',
+          text: 'ratings',
+        },
+        {
+          url: '#shop-help',
+          text: 'shop help',
+        },
+        {
+          url: '#contact-us',
+          text: 'contact us',
+        },
+      ],
+
+      arrSites: [
+        {
+          url: '#DC',
+          text: 'DC',
+        },
+        {
+          url: '#MAD',
+          text: 'MAD megazine',
+        },
+        {
+          url: '#DC-kids',
+          text: 'DC kids',
+        },
+        {
+          url: '#DC-universe',
+          text: 'DC universe',
+        },
+        {
+          url: '#DC-power-visa',
+          text: 'DC power visa',
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -79,6 +226,7 @@ export default {
 $brand_color: rgb(12, 124, 236);
   .footer-links{
     background-image: url('@/img/footer-bg.jpg');
+    background-size: cover;
 
     .container{
       max-width: 1200px;
@@ -103,17 +251,28 @@ $brand_color: rgb(12, 124, 236);
           list-style: none;
           margin: 0 1.5rem 1rem 0;
 
+          h3{
+            margin-bottom: 1rem;
+            font-size: 1rem;
+          }
+
           li{
             font-weight: 500;
             margin: .3rem 0;
             font-size: 13px;
-            color: gray;
             cursor: pointer;
 
-            &:hover{
-              text-decoration: underline;
-              color: white;
+            a{
+              text-decoration: none;
+              color: gray;
+              text-transform: capitalize;
+
+              &:hover{
+                text-decoration: underline;
+                color: white;
+              }
             }
+
           }
 
           .first-item-list{

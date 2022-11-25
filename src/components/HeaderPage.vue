@@ -1,18 +1,17 @@
 <template>
   <header>
     <div class="navbar">
-      <img src="@/img/dc-logo.png" alt="logo">
+      <img
+        src="@/img/dc-logo.png"
+        alt="logo"
+      >
       <ul class="menu-list">
-        <li>Characters</li>
-        <li class="active">Comics</li>
-        <li>Movies</li>
-        <li>TV</li>
-        <li>Games</li>
-        <li>Collectibles</li>
-        <li>Videos</li>
-        <li>Fans</li>
-        <li>News</li>
-        <li>Shop</li>
+        <li
+          v-for="element in arrNavbar"
+          :key="element.text"
+        >
+          <a :href="element.url">{{ element.text }}</a>
+        </li>
       </ul>
     </div>
   </header>
@@ -21,6 +20,52 @@
 <script>
 export default {
   name: 'HeaderPage',
+  data() {
+    return {
+      arrNavbar: [
+        {
+          url: '#characters',
+          text: 'characters',
+        },
+        {
+          url: '#comics',
+          text: 'comics',
+        },
+        {
+          url: '#movies',
+          text: 'movies',
+        },
+        {
+          url: '#tv',
+          text: 'tv',
+        },
+        {
+          url: '#games',
+          text: 'games',
+        },
+        {
+          url: '#collectibles',
+          text: 'collectibles',
+        },
+        {
+          url: '#videos',
+          text: 'videos',
+        },
+        {
+          url: '#fans',
+          text: 'fans',
+        },
+        {
+          url: '#news',
+          text: 'news',
+        },
+        {
+          url: '#shop',
+          text: 'shop',
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -56,18 +101,20 @@ header{
       font-size: 15px;
       font-weight: 700;
       text-transform: uppercase;
-      color: rgb(76, 70, 70);
       cursor: pointer;
 
+      a{
+        text-decoration: none;
+        color: rgb(76, 70, 70);
+      }
+
       &:hover{
-        color: $brand_color;
         border-bottom: 3px solid $brand_color;
       }
-    }
 
-    .active{
-      color: $brand_color;
-      border-bottom: 3px solid $brand_color;
+      &:hover a{
+        color: $brand_color;
+      }
     }
   }
 }

@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import HeaderPage from '@/components/HeaderPage.vue';
+import HeaderPage from './components/HeaderPage.vue';
 import ContentPage from './components/ContentPage.vue';
 import ContentShopPage from './components/ContentShopPage.vue';
 import FooterPage from './components/FooterPage.vue';
